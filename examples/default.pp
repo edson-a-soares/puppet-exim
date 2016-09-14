@@ -7,14 +7,16 @@ exec { "add-php7-repository":
 } ->
 
 exec { "apt-key-repository":
-    command     => "sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C",
-    path        => [ "/bin", "/usr/bin", "/usr/local/bin" ],
+    command   => "sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C",
+    timeout   => 0,
+    path      => [ "/bin", "/usr/bin", "/usr/local/bin" ],
 }
 
 exec { "apt-update-and-install":
-    command     => "sudo apt-get update && sudo apt-get install --yes php7.0",
-    require     => Exec[ "apt-key-repository" ],
-    path        => [ "/bin", "/usr/bin", "/usr/local/bin" ],
+    command   => "sudo apt-get update && sudo apt-get install --yes php7.0",
+    require   => Exec[ "apt-key-repository" ],
+    timeout   => 0,
+    path      => [ "/bin", "/usr/bin", "/usr/local/bin" ],
 } ->
 
 exim::configure { "configure-exim":
