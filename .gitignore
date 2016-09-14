@@ -1,0 +1,14 @@
+## InteliJ
+.idea/*
+
+## Librarian-puppet
+.tmp/
+.librarian/
+.bundle
+/pkg
+/Puppetfile.lock
+/modules
+
+## Vagrant
+examples/*
+Vagrantfile

@@ -1,0 +1,26 @@
+{
+  "name": "edson-exim",
+  "version": "0.1.0",
+  "author": "edson",
+  "summary": "",
+  "license": "Apache License Version 2.0",
+  "source": "https://github.com/edson-a-soares/puppet-exim",
+  "project_page": "https://github.com/edson-a-soares/puppet-exim",
+  "issues_url": "https://github.com/edson-a-soares/puppet-exim/issues",
+  "description": "A Puppet module to download, install and configure exim4.",
+  "dependencies": [ ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "14.04"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">=3.4.0"
+    }
+  ]
+}
